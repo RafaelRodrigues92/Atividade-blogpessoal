@@ -13,8 +13,8 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.UpdateTimestamp;
 
-@Entity
-@Table(name = "tb_postagens") 
+@Entity //create table
+@Table(name = "tb_postagens") //tb_postagens
 public class Postagem {
 	
 	@Id // Primary Key id
