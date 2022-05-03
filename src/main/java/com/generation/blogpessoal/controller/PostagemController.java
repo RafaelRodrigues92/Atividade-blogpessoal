@@ -21,7 +21,7 @@ import com.generation.blogpessoal.model.Postagem;
 import com.generation.blogpessoal.repository.PostagemRepository;
 
 @RestController
-@RequestMapping("/postagens")
+@RequestMapping("/postagem")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PostagemController {
 	
@@ -64,8 +64,7 @@ public class PostagemController {
 	public ResponseEntity<?> deletePostagem(@PathVariable Long id) {
 		
 		return postagemRepository.findById(id)
-				.map(resposta -> {
-					postagemRepository.deleteById(id);
+				.map(resposta -> { postagemRepository.deleteById(id);
 					return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 				})
 				.orElse(ResponseEntity.notFound().build());
