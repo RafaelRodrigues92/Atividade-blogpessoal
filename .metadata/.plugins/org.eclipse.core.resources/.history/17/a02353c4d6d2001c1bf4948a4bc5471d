@@ -1,0 +1,9 @@
+package com.generation.blogpessoal.repository;
+
+public class UsuarioRepositoryTest {
+
+	public UsuarioRepositoryTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
